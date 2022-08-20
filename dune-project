@@ -5,7 +5,7 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github OlaviAikas/otracer))
 
 (authors "Olavi Äikäs")
 
@@ -20,8 +20,9 @@
  (synopsis "A basic raytracer (renderer)")
  (description "This is just a raytracer I'm writing in order
                to learn OCaml, and dune better.")
- (depends ocaml dune)
+ (depends ocaml dune camlimages alcotest)
  (tags
-  (topics "to describe" your project)))
+  (graphics rendering raytracing)
+ ))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project
