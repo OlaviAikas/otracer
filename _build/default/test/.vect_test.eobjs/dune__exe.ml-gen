@@ -1,0 +1,10 @@
+(** @canonical Dune__exe.Quaternions_test *)
+module Quaternions_test = Dune__exe__Quaternions_test
+
+
+(** @canonical Dune__exe.Sphere_test *)
+module Sphere_test = Dune__exe__Sphere_test
+
+
+(** @canonical Dune__exe.Vect_test *)
+module Vect_test = Dune__exe__Vect_test

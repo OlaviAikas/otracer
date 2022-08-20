@@ -1,0 +1,3 @@
+(library
+  (name raytracing)
+  (libraries fmt))

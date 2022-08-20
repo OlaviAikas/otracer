@@ -1,0 +1,3 @@
+(tests
+ (names vect_test quaternions_test sphere_test)
+ (libraries raytracing alcotest fmt))

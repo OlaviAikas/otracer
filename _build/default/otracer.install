@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/otracer/META"
+  "_build/install/default/lib/otracer/dune-package"
+  "_build/install/default/lib/otracer/opam"
+]
+bin: [
+  "_build/install/default/bin/otracer"
+]

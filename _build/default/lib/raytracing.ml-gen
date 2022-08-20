@@ -1,0 +1,30 @@
+(** @canonical Raytracing.Camera *)
+module Camera = Raytracing__Camera
+
+
+(** @canonical Raytracing.Light *)
+module Light = Raytracing__Light
+
+
+(** @canonical Raytracing.Params *)
+module Params = Raytracing__Params
+
+
+(** @canonical Raytracing.Quaternion *)
+module Quaternion = Raytracing__Quaternion
+
+
+(** @canonical Raytracing.Scene *)
+module Scene = Raytracing__Scene
+
+
+(** @canonical Raytracing.Sphere *)
+module Sphere = Raytracing__Sphere
+
+
+(** @canonical Raytracing.Typedefs *)
+module Typedefs = Raytracing__Typedefs
+
+
+(** @canonical Raytracing.Vect *)
+module Vect = Raytracing__Vect
