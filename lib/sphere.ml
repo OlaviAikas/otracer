@@ -14,7 +14,7 @@ let sphere pos r material albedo : geometry =
          normal = normalise (sub int_pos pos);
          material = material;
          albedo = albedo;}
-      else {pos = zero; normal = zero; material = Lambertian; albedo = zero;})
+      else empty_intersection)
     else
     let sqrt_discr = Float.sqrt discr in
     let sol1 = -.p -. sqrt_discr in
@@ -35,6 +35,6 @@ let sphere pos r material albedo : geometry =
          normal = normalise (sub int_pos pos);
          material = material;
          albedo = albedo;}
-      ) else {pos = zero; normal = zero; material = Lambertian; albedo = albedo;}
+      ) else empty_intersection
     ) in
   intersection

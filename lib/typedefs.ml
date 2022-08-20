@@ -14,6 +14,9 @@ type intersection = {
   albedo: vect;
 }
 
+let empty_intersection: intersection =
+  {pos = zero; normal = zero; material = Lambertian; albedo = zero;}
+
 type geometry = ray -> intersection
 
 type light = intersection -> geometry list -> float

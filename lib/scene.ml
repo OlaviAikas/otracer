@@ -29,7 +29,7 @@ let get_colour (r: ray) (s: scene) (depth: int) : vect =
   if depth <= 0 then zero else
   let closest_int = closest_intersection r geos in
   if closest_int.normal = zero then
-  (1.0, 1.0, 1.0) else match closest_int.material with
+  zero else match closest_int.material with
     Lambertian -> 
       let accum_light (s: float) (l: light) : float = s +. (l closest_int geos) in
       let tot_light = List.fold_left accum_light 0.0 lights in

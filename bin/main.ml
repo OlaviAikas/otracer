@@ -20,9 +20,10 @@ let gamma_correct (gamma: float) (v: Vect.vect) : Vect.vect =
 let main () =
   let img = Rgb24.create Params.width Params.height in
   let t = Sphere.sphere (0.0, 0.0, 10.0) 2.0 Lambertian (0.5, 0.5, 0.5) in
+  let wall = Plane.plane (0.0, 0.0, 15.0) (0.0, 0.0, 1.0) Lambertian (1.0, 0.0, 0.0) in
   let pl = Light.point_light Vect.zero 2000.0 in
   let scene: Typedefs.scene = ([], []) |>
-  (Scene.add_geo t) |> (Scene.add_light pl) in
+  (Scene.add_geo t) |> (Scene.add_light pl) |> (Scene.add_geo wall) in
   let camera = Camera.new_cam (0.0, 0.0, 0.0) (0.0, 0.0, 1.0) (0.0, 1.0, 0.0) 1.04 in
   let () = print_string "Scene loaded. Rendering...\n" in
   let () =
