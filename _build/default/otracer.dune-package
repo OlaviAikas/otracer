@@ -1,4 +1,0 @@
-(lang dune 3.4)
-(name otracer)
-(sections (lib .) (bin ../../bin))
-(files (lib (META dune-package opam)) (bin (otracer)))
