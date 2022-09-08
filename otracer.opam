@@ -7,10 +7,10 @@ This is just a raytracer I'm writing in order
 maintainer: ["Olavi Äikäs"]
 authors: ["Olavi Äikäs"]
 license: "OPENDOMAIN"
-tags: ["topics" "to describe" "your" "project"]
-homepage: "https://github.com/username/reponame"
+tags: ["graphics" "rendering" "raytracing"]
+homepage: "https://github.com/OlaviAikas/otracer"
 doc: "https://url/to/documentation"
-bug-reports: "https://github.com/username/reponame/issues"
+bug-reports: "https://github.com/OlaviAikas/otracer/issues"
 depends: [
   "ocaml"
   "dune" {>= "3.2"}
@@ -32,4 +32,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/username/reponame.git"
+dev-repo: "git+https://github.com/OlaviAikas/otracer.git"
