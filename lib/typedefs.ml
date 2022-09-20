@@ -7,6 +7,19 @@ type ray = {
   dir: vect;
 }
 
+type photon = {
+  pos: vect;
+  colour: vect;
+}
+
+type light = Pointlight of vect * float
+
+type node =
+    None
+  | Some of int * photon * node * node
+
+type photon_tree = node
+
 type intersection = {
   pos: vect;
   normal: vect;
@@ -19,6 +32,5 @@ let empty_intersection: intersection =
 
 type geometry = ray -> intersection
 
-type light = intersection -> geometry list -> float
+type scene = geometry list * light list * photon_tree
 
-type scene = geometry list * light list

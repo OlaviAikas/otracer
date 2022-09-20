@@ -49,12 +49,12 @@ let unpack_pointlight (pl: Otoml.t) : light =
   in
   let pl_list = Otoml.get_table pl in
   let (pos, intensity) = get_light_info Vect.zero 0.0 pl_list in
-  Light.point_light pos intensity
+  Pointlight(pos, intensity)
 
 let load_scene (filename: string) : scene =
   let rec unpack_scene otoml_scene geos lights : scene =
     match otoml_scene with
-      [] -> (geos, lights)
+      [] -> (geos, lights, None)
     | ("point_light", arr) :: tail -> unpack_scene tail geos (List.rev_append (Otoml.get_array unpack_pointlight arr) lights)
     | ("sphere", arr) :: tail -> unpack_scene tail (List.rev_append (Otoml.get_array unpack_sphere arr) geos) lights
     | ("plane", arr) :: tail -> unpack_scene tail (List.rev_append (Otoml.get_array unpack_plane arr) geos) lights
