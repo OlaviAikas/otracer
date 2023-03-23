@@ -14,7 +14,7 @@ bug-reports: "https://github.com/OlaviAikas/otracer/issues"
 depends: [
   "ocaml"
   "dune" {>= "3.2"}
-  "camlimages"
+  "imagelib"
   "alcotest"
   "odoc" {with-doc}
 ]

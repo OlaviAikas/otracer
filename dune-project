@@ -20,7 +20,7 @@
  (synopsis "A basic raytracer (renderer)")
  (description "This is just a raytracer I'm writing in order
                to learn OCaml, and dune better.")
- (depends ocaml dune camlimages alcotest)
+ (depends ocaml dune imagelib alcotest)
  (tags
   (graphics rendering raytracing)
  ))

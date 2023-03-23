@@ -30,3 +30,6 @@ setup.log
 
 # Local OPAM switch
 _opam/
+
+# output image
+image.png

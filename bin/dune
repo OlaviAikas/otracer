@@ -1,4 +1,4 @@
 (executable
  (public_name otracer)
  (name main)
- (libraries camlimages.png raytracing))
+ (libraries imagelib imagelib.unix raytracing))
