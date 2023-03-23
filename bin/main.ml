@@ -2,9 +2,9 @@ open Raytracing
 
 let clamp_colour (v: Vect.vect) : Vect.vect =
   let fr, fg, fb = v in
-  (Float.min 255.0 (Float.max (fr *. 255.0) 0.0),
-   Float.min 255.0 (Float.max (fg *. 255.0) 0.0),
-   Float.min 255.0 (Float.max (fb *. 255.0) 0.0))
+  ((fr *. 255.0) |> Float.max 0.0 |> Float.min 255.0,
+   (fg *. 255.0) |> Float.max 0.0 |> Float.min 255.0,
+   (fb *. 255.0) |> Float.max 0.0 |> Float.min 255.0)
 
 let gamma_correct (gamma: float) (v: Vect.vect) : Vect.vect =
   let fr, fg, fb = v in
